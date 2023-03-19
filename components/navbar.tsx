@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import NextSVG from "../public/next.svg";
+import IconWeb from "../public/icon.svg";
 import Link from "next/link";
 import { useState } from "react";
 function Navbar() {
@@ -16,9 +16,9 @@ function Navbar() {
           <p>Download App</p>
         </div>
       </div>
-      <div className="sticky top-0">
+      <div className="fixed w-full ">
         {/* Website NavBar */}
-        <div className="flex justify-between w-full px-2 bg-gray-200 md:px-4">
+        <div className="flex justify-between px-2 h-[75px] bg-gray-200 md:px-4">
           <div className="flex-wrap items-center hidden space-x-2 justify-self-start md:flex justify-evenly">
             <p>Venues</p>
             <p>Vendors</p>
@@ -46,9 +46,9 @@ function Navbar() {
             </div>
           </button>
           <div className="w-24 max-w-full justify-self-center">
-            <a href="/" className="block w-full py-5 navbar-logo">
-              <Image src={NextSVG} alt="logo" className="w-full header-logo" />
-            </a>
+            <Link href="/" className="block w-full navbar-logo">
+              <Image src={IconWeb} alt="logo" className="w-full header-logo" />
+            </Link>
           </div>
           <div className="flex items-center space-x-2 justify-evenly">
             <p className="hidden md:block">Real Weddings</p>
@@ -61,8 +61,8 @@ function Navbar() {
         {/* Mobile SideBar */}
         <div
           className={`${
-            show ? "" : "-translate-x-full "
-          }hover:shadow-lg w-64 px-2 py-4 space-y-6 text-gray-900 transition duration-200 ease-in-out transform bg-gray-100 md:invisible`}
+            show ? "" : "hidden "
+          }hover:drop-shadow-2xl drop-shadow-lg w-64 px-2 py-4 space-y-6 text-gray-900 transition duration-200 ease-in-out transform bg-gray-100 md:invisible`}
         >
           {/* Mobile Links */}
           <nav className="flex flex-col space-y-3">

@@ -23,8 +23,9 @@ export default function RootLayout({
         <title>Wedding Planner</title>
       </head>
       <body className="debug-screens">
-        <Navbar/>
-        {children}
+        <Navbar />
+        <div className="pt-[75px]">{children}</div>
+        
         <MobileNavigationBar/>
         <Footer/>
       </body>
