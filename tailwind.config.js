@@ -9,7 +9,13 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    gradientColorStops: (theme) => ({
+      ...theme('colors'),
+      transparent: 'rgba(255, 255, 255, 0.01)',
+    }),
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-debug-screens'),
+  ],
 }
