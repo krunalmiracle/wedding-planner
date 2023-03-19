@@ -1,7 +1,6 @@
-import React from 'react'
 import { BiHomeHeart, BiStore, BiPhotoAlbum } from "react-icons/bi";
 import {BsEnvelopePaperHeart, BsFillChatSquareHeartFill} from "react-icons/bs";
-function BottomBar() {
+function MobileNavigationBar() {
   return (
     <div className="fixed bottom-0 w-full py-3 md:hidden bg-slate-300">
         <div className="flex flex-row items-center justify-around mx-8">
@@ -39,4 +38,4 @@ function BottomBar() {
     </div>)
 }
 
-export default BottomBar
+export default MobileNavigationBar

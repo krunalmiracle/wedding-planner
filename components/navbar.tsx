@@ -3,7 +3,7 @@ import Image from "next/image";
 import NextSVG from "../public/next.svg";
 import Link from "next/link";
 import { useState } from "react";
-function NavBar() {
+function Navbar() {
   const [show, toggleShow] = useState(false);
   return (
     <>
@@ -122,4 +122,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default Navbar;

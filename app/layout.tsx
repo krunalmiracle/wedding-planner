@@ -1,7 +1,7 @@
 import Footer from '@/components/footer'
-import NavBar from '@/components/navBar'
+import MobileNavigationBar from '@/components/mobileNavigationBar';
+import Navbar from '@/components/navbar';
 import './globals.css'
-import BottomBar from './../components/bottomBar';
 
 export const metadata = {
   title: 'Wedding Planner',
@@ -23,9 +23,9 @@ export default function RootLayout({
         <title>Wedding Planner</title>
       </head>
       <body className="debug-screens">
-        <NavBar/>
+        <Navbar/>
         {children}
-        <BottomBar/>
+        <MobileNavigationBar/>
         <Footer/>
       </body>
     </html>
