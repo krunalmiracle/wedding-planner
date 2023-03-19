@@ -11,8 +11,8 @@ function Footer() {
               fill="none"
               stroke="currentColor"
               stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinejoin="round"
+              strokeWidth="2"
               className="w-10 h-10 p-2 text-white bg-yellow-500 rounded-full"
               viewBox="0 0 24 24"
             >
@@ -121,8 +121,8 @@ function Footer() {
               <svg
                 fill="currentColor"
                 stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 className="w-5 h-5"
                 viewBox="0 0 24 24"
               >
@@ -133,8 +133,8 @@ function Footer() {
               <svg
                 fill="currentColor"
                 stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 className="w-5 h-5"
                 viewBox="0 0 24 24"
               >
@@ -146,8 +146,8 @@ function Footer() {
                 fill="none"
                 stroke="currentColor"
                 stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 className="w-5 h-5"
                 viewBox="0 0 24 24"
               >
@@ -160,8 +160,8 @@ function Footer() {
                 fill="currentColor"
                 stroke="currentColor"
                 stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="0"
+                strokeLinejoin="round"
+                strokeWidth="0"
                 className="w-5 h-5"
                 viewBox="0 0 24 24"
               >
