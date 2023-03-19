@@ -37,7 +37,7 @@ function Navbar() {
     <>
       <div className="absolute top-0 justify-between hidden w-full px-2 bg-gray-300 item-start md:flex md:px-4">
         <div className="items-center">
-          <p>Europes Favourite Wedding Planning Platform</p>
+          <p>World&apos;s Favourite Wedding Planning Platform</p>
         </div>
         <div className="items-center space-x-2 md:flex">
           <p>Write A Review</p>
