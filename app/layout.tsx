@@ -24,8 +24,7 @@ export default function RootLayout({
       </head>
       <body className="debug-screens">
         <Navbar />
-        <div className="pt-[75px]">{children}</div>
-        
+        {children}
         <MobileNavigationBar/>
         <Footer/>
       </body>

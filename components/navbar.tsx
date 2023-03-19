@@ -2,9 +2,37 @@
 import Image from "next/image";
 import IconWeb from "../public/icon.svg";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 function Navbar() {
   const [show, toggleShow] = useState(false);
+  const [clientWindowHeight, setClientWindowHeight] = useState("");
+
+  const [backgroundTransparacy, setBackgroundTransparacy] = useState(0);
+  const [padding, setPadding] = useState(30);
+  const [boxShadow, setBoxShadow] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
+
+  const handleScroll = () => {
+    setClientWindowHeight(window.scrollY.toString());
+  };
+
+  useEffect(() => {
+    let backgroundTransparacyVar = parseFloat(clientWindowHeight) / 600;
+
+    if (backgroundTransparacyVar < 1) {
+      let paddingVar = 30 - backgroundTransparacyVar * 20;
+      let boxShadowVar = backgroundTransparacyVar * 0.1;
+      setBackgroundTransparacy(backgroundTransparacyVar);
+      setPadding(paddingVar);
+      setBoxShadow(boxShadowVar);
+    }
+  }, [clientWindowHeight]);
+
   return (
     <>
       <div className="absolute top-0 justify-between hidden w-full px-2 bg-gray-300 item-start md:flex md:px-4">
@@ -18,7 +46,13 @@ function Navbar() {
       </div>
       <div className="fixed w-full ">
         {/* Website NavBar */}
-        <div className="flex justify-between px-2 h-[75px] bg-gray-200 md:px-4">
+        <div
+          className="flex justify-between px-2 h-[75px] md:px-4"
+          style={{
+            background: `rgba(255, 255, 255, ${backgroundTransparacy})`,
+            boxShadow: `rgb(0 0 0 / ${boxShadow}) 0px 0px 20px 6px`,
+          }}
+        >
           <div className="flex-wrap items-center hidden space-x-2 justify-self-start md:flex justify-evenly">
             <p>Venues</p>
             <p>Vendors</p>
@@ -30,9 +64,6 @@ function Navbar() {
             id="navbarToggler"
             className="items-start rounded-lg ring-primary focus:ring-2 md:hidden"
           >
-            {/* <span className="relative my-[6px] block h-[4px] w-[30px] bg-gray-500"></span>
-          <span className="relative my-[6px] block h-[4px] w-[30px] bg-gray-500"></span>
-          <span className="relative my-[6px] block h-[4px] w-[30px] bg-gray-500"></span> */}
             <div
               className="flex items-center justify-center w-full group/sidebar"
               onClick={() => toggleShow(!show)}
