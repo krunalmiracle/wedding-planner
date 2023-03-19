@@ -70,8 +70,12 @@ function Navbar() {
             >
               <div className="flex items-center justify-center w-12 h-12 bg-white cursor-pointer group rounded-2xl hover:bg-slate-200">
                 <div className="space-y-1.5">
-                  <span className="block h-1 w-10 origin-center rounded-full bg-slate-500 transition-transform ease-in-out group-hover/sidebar:translate-y-1.5 group-hover/sidebar:rotate-45 group-hover/items:invisible"></span>
-                  <span className="block h-1 w-8 origin-center rounded-full bg-orange-500 transition-transform ease-in-out group-hover:w-10 group-hover/sidebar:-translate-y-1.5 group-hover/sidebar:-rotate-45"></span>
+                  <span  className={`${
+            show ? "translate-y-1.5 rotate-45 " : ""
+          }block h-1 w-10 origin-center rounded-full bg-slate-500 transition-transform ease-in-out`}></span>
+                  <span className={`${
+            show ? "w-10 -translate-y-1.5 -rotate-45 " : ""
+          }block h-1 w-8 origin-center rounded-full bg-orange-500 transition-transform ease-in-out`} ></span>
                 </div>
               </div>
             </div>
